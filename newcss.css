@@ -1,0 +1,192 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: linear-gradient(360deg, #5b548a, #00feba);
+        min-height: 100vh; /* Adaptive height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .outer {
+        border: 2px dotted blue;
+        width: 90%;
+        max-width: 450px;
+        background: linear-gradient(135deg, #00feba, #5b548a);
+        color: #fff;
+        margin: 20px auto;
+        border-radius: 20px;
+        padding: 30px 25px;
+        text-align: center;
+    }
+
+    header {
+        font-size: 2rem; /* Responsive font size */
+        font-weight: 550;
+        color: Blue;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        margin-top: 40px;
+        color: rgb(209, 14, 44);
+    }
+
+    .search {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping */
+        align-items: center;
+        justify-content: center; /* Centers elements on smaller screens */
+    }
+
+    .search input {
+        border: 0;
+        outline: 0;
+        background: #ebfffc;
+        color: #555;
+        padding: 10px 25px;
+        height: 3rem; /* Flexible height */
+        border-radius: 30px;
+        flex: 1;
+        margin: 10px 5px;
+        font-size: 1rem; /* Adaptive text size */
+        max-width: 70%;
+    }
+
+    .search button {
+        border: 0;
+        outline: 0;
+        background: #ebfffc;
+        border-radius: 50%;
+        width: 3rem; /* Adjusted size */
+        height: 3rem;
+        margin-left: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search button img {
+        width: 1.2rem;
+    }
+
+    .weather-icon {
+        width: 80%; /* Responsive icon size */
+        max-width: 150px;
+        margin-top: 30px;
+    }
+
+    .weather h1 {
+        font-size: 5vw; /* Adjusts size dynamically */
+        font-weight: 400;
+    }
+
+    .weather h2 {
+        font-size: 4vw;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+    .weather{
+   display: none;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+         /*Stacks elements for smaller screens */
+        align-items: center;
+        margin-top: 50px;
+        justify-content: space-between;
+        padding: 0 20px;
+        gap: 15px;
+        
+    }
+
+    .col {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .col img {
+        width: 2rem; /* Adaptive size */
+        margin-right: 10px;
+    }
+
+    .humidity, .wind {
+        font-size: 1.5rem; /* Flexible font size */
+    }
+    footer p{
+        margin-top: 15px;
+        
+    }
+
+    @media screen and (min-width: 768px) {
+        .outer {
+            max-width: 600px;
+        }
+
+        .details {
+           
+            flex-direction: row;
+             /* Reverts to row layout for larger screens */
+        }
+
+        header {
+            font-size: 2.5rem;
+        }
+
+        .search input {
+            max-width: 85%; /* Better proportion for larger screens */
+            height: 4rem;
+            font-size: 1.2rem;
+        }
+
+        .search button {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+
+        .weather h1 {
+            font-size: 3.5rem;
+            padding-bottom: 15px;
+        }
+
+        .weather h2 {
+            font-size: 2rem;
+        }
+
+        .col img {
+            width: 2.5rem;
+        }
+
+        .humidity, .wind {
+            font-size: 1.8rem;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .outer {
+            max-width: 700px;
+        }
+
+        header {
+            font-size: 3rem;
+        }
+
+        .weather h1 {
+            font-size: 4rem;
+        }
+
+        .weather h2 {
+            font-size: 2.5rem;
+        }
+    }
