@@ -44,5 +44,5 @@ const apikey="7b5708a9a68d57537ffcb9b65398717e";
     }
 
     searchbtn.addEventListener('click',()=>{
-        checkweather(searchbox.value);
+        checkweather(searchbox.value.trim());
     })
